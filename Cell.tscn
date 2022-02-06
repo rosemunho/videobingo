@@ -1,0 +1,22 @@
+[gd_scene format=2]
+
+[node name="Cell" type="ColorRect"]
+margin_right = 50.0
+margin_bottom = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Num" type="Label" parent="."]
+margin_right = 50.0
+margin_bottom = 50.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 2.0
+max_lines_visible = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
