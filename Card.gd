@@ -32,4 +32,9 @@ func display_card():
 func generate_values():
 	for i in 15:
 		randomize()
-		cells[i] = (randi() %  60-1) + 1
+		cells.push_back((randi() %  60-1) + 1)
+
+
+func on_card_clicked():
+	is_active = not is_active
+	display_card()

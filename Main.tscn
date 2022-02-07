@@ -10,8 +10,12 @@
 script = SubResource( 1 )
 
 [node name="CardTray" type="GridContainer" parent="."]
-margin_right = 600.0
-margin_bottom = 400.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -375.0
+margin_right = 650.0
+margin_bottom = -25.0
 grow_horizontal = 0
 grow_vertical = 0
 custom_constants/vseparation = 200
@@ -38,22 +42,29 @@ margin_right = 350.0
 margin_bottom = 200.0
 
 [node name="BallTray" type="Container" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 750.0
+margin_bottom = 200.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayButton" type="Button" parent="."]
-margin_right = 43.0
-margin_bottom = 20.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -124.0
+margin_top = 25.0
+margin_right = -24.0
+margin_bottom = 55.0
 text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Prizetable" type="VBoxContainer" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -61,3 +72,5 @@ __meta__ = {
 }
 
 [node name="Prize" parent="Prizetable" instance=ExtResource( 2 )]
+
+[connection signal="pressed" from="PlayButton" to="BallTray" method="on_play_btn_clicked"]
