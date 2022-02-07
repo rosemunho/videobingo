@@ -5,6 +5,7 @@
 [node name="Cell" type="ColorRect"]
 margin_right = 50.0
 margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -13,6 +14,7 @@ __meta__ = {
 [node name="Num" type="Label" parent="."]
 margin_right = 50.0
 margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
 size_flags_vertical = 1
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"

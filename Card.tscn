@@ -16,92 +16,86 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="CellContainer" type="GridContainer" parent="."]
-visible = false
 margin_right = 250.0
 margin_bottom = 150.0
+rect_min_size = Vector2( 250, 150 )
+custom_constants/vseparation = 1
+custom_constants/hseparation = 1
 columns = 5
 
 [node name="Cell1" parent="CellContainer" instance=ExtResource( 2 )]
-margin_right = 0.0
-margin_bottom = 0.0
 
 [node name="Cell2" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 4.0
-margin_right = 4.0
-margin_bottom = 0.0
+margin_left = 51.0
+margin_right = 101.0
 
 [node name="Cell3" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 8.0
-margin_right = 8.0
-margin_bottom = 0.0
+margin_left = 102.0
+margin_right = 152.0
 
 [node name="Cell4" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_right = 12.0
-margin_bottom = 0.0
+margin_left = 153.0
+margin_right = 203.0
 
 [node name="Cell5" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 16.0
-margin_right = 16.0
-margin_bottom = 0.0
+margin_left = 204.0
+margin_right = 254.0
 
 [node name="Cell6" parent="CellContainer" instance=ExtResource( 2 )]
-margin_top = 4.0
-margin_right = 0.0
-margin_bottom = 4.0
+margin_top = 51.0
+margin_bottom = 101.0
 
 [node name="Cell7" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 4.0
-margin_bottom = 4.0
+margin_left = 51.0
+margin_top = 51.0
+margin_right = 101.0
+margin_bottom = 101.0
 
 [node name="Cell8" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 8.0
-margin_top = 4.0
-margin_right = 8.0
-margin_bottom = 4.0
+margin_left = 102.0
+margin_top = 51.0
+margin_right = 152.0
+margin_bottom = 101.0
 
 [node name="Cell9" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 4.0
-margin_right = 12.0
-margin_bottom = 4.0
+margin_left = 153.0
+margin_top = 51.0
+margin_right = 203.0
+margin_bottom = 101.0
 
 [node name="Cell10" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 16.0
-margin_top = 4.0
-margin_right = 16.0
-margin_bottom = 4.0
+margin_left = 204.0
+margin_top = 51.0
+margin_right = 254.0
+margin_bottom = 101.0
 
 [node name="Cell11" parent="CellContainer" instance=ExtResource( 2 )]
-margin_top = 8.0
-margin_right = 0.0
-margin_bottom = 8.0
+margin_top = 102.0
+margin_bottom = 152.0
 
 [node name="Cell12" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 4.0
-margin_top = 8.0
-margin_right = 4.0
-margin_bottom = 8.0
+margin_left = 51.0
+margin_top = 102.0
+margin_right = 101.0
+margin_bottom = 152.0
 
 [node name="Cell13" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 8.0
-margin_bottom = 8.0
+margin_left = 102.0
+margin_top = 102.0
+margin_right = 152.0
+margin_bottom = 152.0
 
 [node name="Cell14" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 8.0
-margin_right = 12.0
-margin_bottom = 8.0
+margin_left = 153.0
+margin_top = 102.0
+margin_right = 203.0
+margin_bottom = 152.0
 
 [node name="Cell15" parent="CellContainer" instance=ExtResource( 2 )]
-margin_left = 16.0
-margin_top = 8.0
-margin_right = 16.0
-margin_bottom = 8.0
+margin_left = 204.0
+margin_top = 102.0
+margin_right = 254.0
+margin_bottom = 152.0
 
 [node name="Button" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0 )
