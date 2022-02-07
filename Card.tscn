@@ -20,7 +20,7 @@ margin_right = 250.0
 margin_bottom = 150.0
 columns = 5
 
-[node name="Cell" parent="CellContainer" instance=ExtResource( 2 )]
+[node name="Cell1" parent="CellContainer" instance=ExtResource( 2 )]
 margin_right = 0.0
 margin_bottom = 0.0
 
