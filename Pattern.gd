@@ -1,11 +1,8 @@
 extends Container
 
-# Prize pattern:
-# + for a prize cell
-# - for an empty cell
 var pattern = []
 
-func connect_prize_signals():
+func _ready():
 	var cells = $CellContainer
 	var cell
 	for i in 15:

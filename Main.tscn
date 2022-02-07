@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Card.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Prize.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Extractor.gd" type="Script" id=3]
 [ext_resource path="res://Prizetable.gd" type="Script" id=4]
 
@@ -80,25 +79,5 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Prize1" parent="Prizetable" instance=ExtResource( 2 )]
-margin_top = 0.0
-margin_right = 200.0
-margin_bottom = 62.0
-
-[node name="Prize2" parent="Prizetable" instance=ExtResource( 2 )]
-margin_top = 72.0
-margin_right = 200.0
-margin_bottom = 134.0
-
-[node name="Prize3" parent="Prizetable" instance=ExtResource( 2 )]
-margin_top = 144.0
-margin_right = 200.0
-margin_bottom = 206.0
-
-[node name="Prize4" parent="Prizetable" instance=ExtResource( 2 )]
-margin_top = 216.0
-margin_right = 200.0
-margin_bottom = 278.0
 
 [connection signal="pressed" from="PlayButton" to="BallTray" method="on_play_btn_clicked"]

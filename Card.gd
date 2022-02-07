@@ -21,14 +21,12 @@ func display_card():
 func generate_card():
 	var cell
 	var cell_num
-	print(self.get_name())
 	for i in 15:
 		generate_value()
 		cell = get_node("CellContainer/Cell" + str(i+1))
 		cell.num = cells[i]
 		cell_num = cell.get_node("Num")
 		cell_num.text = str(cells[i])
-		print(str(i) + ": " + str(cell.num))
 
 func generate_value():
 	var found = false

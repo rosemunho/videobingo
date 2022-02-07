@@ -7,7 +7,6 @@ var num = -1
 
 func test_value(ball_num):
 	if ball_num == num:
-		print(str(num) + ": It's a match")
 		curr_status = Status.HIT
 		update_color()
 		emit_signal("cell_matched")
