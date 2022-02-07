@@ -64,13 +64,39 @@ __meta__ = {
 }
 
 [node name="Prizetable" type="VBoxContainer" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -200.0
+margin_top = -335.0
+margin_bottom = -57.0
+rect_min_size = Vector2( 200, 270 )
+size_flags_horizontal = 0
+custom_constants/separation = 10
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Prize" parent="Prizetable" instance=ExtResource( 2 )]
+[node name="Prize1" parent="Prizetable" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_right = 200.0
+margin_bottom = 62.0
+
+[node name="Prize2" parent="Prizetable" instance=ExtResource( 2 )]
+margin_top = 72.0
+margin_right = 200.0
+margin_bottom = 134.0
+
+[node name="Prize3" parent="Prizetable" instance=ExtResource( 2 )]
+margin_top = 144.0
+margin_right = 200.0
+margin_bottom = 206.0
+
+[node name="Prize4" parent="Prizetable" instance=ExtResource( 2 )]
+margin_top = 216.0
+margin_right = 200.0
+margin_bottom = 278.0
 
 [connection signal="pressed" from="PlayButton" to="BallTray" method="on_play_btn_clicked"]
