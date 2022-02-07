@@ -5,7 +5,7 @@ var init_pos = [-1, -1]
 var end_pos = [-1, -1]
 var color = "white"
 
-signal ball_ended
+signal ball_ended(ball_num)
 
 func _ready():
 	var cards = get_node("../../CardTray")
@@ -13,5 +13,5 @@ func _ready():
 		connect("ball_ended", card, "on_ball_ended")
 
 func extract():
-	emit_signal("ball_ended")
+	emit_signal("ball_ended", num)
 	pass

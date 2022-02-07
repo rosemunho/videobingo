@@ -1,8 +1,11 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Cell.gd" type="Script" id=1]
 
 [node name="Cell" type="ColorRect"]
 margin_right = 50.0
 margin_bottom = 50.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

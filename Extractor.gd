@@ -26,6 +26,7 @@ func generate_play():
 	var i = 0
 	for ball in self.get_children():
 		generate_value()
+		ball.num = balls[i]
 		ball_num = ball.get_node("Num")
 		ball_num.text = str(balls[i])
 		i+=1
