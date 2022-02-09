@@ -19,14 +19,21 @@ func display_card():
 		
 # Change hardcoded values
 func generate_card():
-	var cell
-	var cell_num
 	for i in 15:
 		generate_value()
-		cell = get_node("CellContainer/Cell" + str(i+1))
-		cell.num = cells[i]
-		cell_num = cell.get_node("Num")
-		cell_num.text = str(cells[i])
+	cells.sort()
+	var cell_index
+	var cell
+	var cell_num
+	var k = 0
+	for i in 5:
+		for j in 3:
+			cell_index = i + j*5
+			cell = get_node("CellContainer/Cell" + str(cell_index+1))
+			cell.num = cells[k]
+			cell_num = cell.get_node("Num")
+			cell_num.text = str(cells[k])
+			k+=1
 
 func generate_value():
 	var found = false
@@ -48,3 +55,8 @@ func on_ball_ended(ball_num):
 	var cells = $CellContainer
 	for cell in cells.get_children():
 		cell.test_value(ball_num)
+
+func reset():
+	cells = ($CellContainer).get_children()
+	for cell in cells:
+		cell.reset()

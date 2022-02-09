@@ -1,4 +1,4 @@
-extends "res://Cell.gd"
+extends ColorRect
 
 enum Status {NO_HIT, ONE_AWAY, HIT}
 
@@ -9,13 +9,16 @@ func test_value(ball_num):
 	if ball_num == num:
 		curr_status = Status.HIT
 		update_color()
-		emit_signal("cell_matched")
 
 func update_color():
 	match curr_status:
 		Status.NO_HIT:
-			color = Color(1, 1, 1, 1)
+			color = Color.white
 		Status.ONE_AWAY:
-			color = Color(0, 1, 1, 1)
+			color = Color.darkgray
 		Status.HIT:
-			color = Color(0, 0, 1, 1)
+			color = Color.deepskyblue
+
+func reset():
+	curr_status = Status.NO_HIT
+	update_color()

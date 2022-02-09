@@ -44,8 +44,8 @@ margin_bottom = 200.0
 [node name="BallTray" type="Container" parent="."]
 margin_left = 25.0
 margin_top = 25.0
-margin_right = 750.0
-margin_bottom = 200.0
+margin_right = 970.0
+margin_bottom = 185.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,5 +79,9 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="pressed" from="PlayButton" to="BallTray" method="on_play_btn_clicked"]

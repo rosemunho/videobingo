@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Pattern.gd" type="Script" id=1]
-[ext_resource path="res://Cell.gd" type="Script" id=2]
 
 [node name="Prize" type="Container"]
 margin_top = 63.0
@@ -28,42 +27,36 @@ __meta__ = {
 margin_right = 20.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell2" type="ColorRect" parent="CellContainer"]
 margin_left = 21.0
 margin_right = 41.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell3" type="ColorRect" parent="CellContainer"]
 margin_left = 42.0
 margin_right = 62.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell4" type="ColorRect" parent="CellContainer"]
 margin_left = 63.0
 margin_right = 83.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell5" type="ColorRect" parent="CellContainer"]
 margin_left = 84.0
 margin_right = 104.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell6" type="ColorRect" parent="CellContainer"]
 margin_top = 21.0
 margin_right = 20.0
 margin_bottom = 41.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell7" type="ColorRect" parent="CellContainer"]
 margin_left = 21.0
@@ -71,7 +64,6 @@ margin_top = 21.0
 margin_right = 41.0
 margin_bottom = 41.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell8" type="ColorRect" parent="CellContainer"]
 margin_left = 42.0
@@ -79,7 +71,6 @@ margin_top = 21.0
 margin_right = 62.0
 margin_bottom = 41.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell9" type="ColorRect" parent="CellContainer"]
 margin_left = 63.0
@@ -87,7 +78,6 @@ margin_top = 21.0
 margin_right = 83.0
 margin_bottom = 41.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell10" type="ColorRect" parent="CellContainer"]
 margin_left = 84.0
@@ -95,14 +85,12 @@ margin_top = 21.0
 margin_right = 104.0
 margin_bottom = 41.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell11" type="ColorRect" parent="CellContainer"]
 margin_top = 42.0
 margin_right = 20.0
 margin_bottom = 62.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell12" type="ColorRect" parent="CellContainer"]
 margin_left = 21.0
@@ -110,7 +98,6 @@ margin_top = 42.0
 margin_right = 41.0
 margin_bottom = 62.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell13" type="ColorRect" parent="CellContainer"]
 margin_left = 42.0
@@ -118,7 +105,6 @@ margin_top = 42.0
 margin_right = 62.0
 margin_bottom = 62.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell14" type="ColorRect" parent="CellContainer"]
 margin_left = 63.0
@@ -126,7 +112,6 @@ margin_top = 42.0
 margin_right = 83.0
 margin_bottom = 62.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="Cell15" type="ColorRect" parent="CellContainer"]
 margin_left = 84.0
@@ -134,7 +119,6 @@ margin_top = 42.0
 margin_right = 104.0
 margin_bottom = 62.0
 rect_min_size = Vector2( 20, 20 )
-script = ExtResource( 2 )
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
 visible = false
