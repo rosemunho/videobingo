@@ -9,6 +9,16 @@
 [node name="Main" type="Node"]
 script = SubResource( 1 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+color = Color( 0.921569, 0.921569, 0.921569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CardTray" type="GridContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0

@@ -4,6 +4,7 @@ var colors = []
 var spacing = 5
 var ball_size = Vector2.ZERO
 
+var id = -1
 var num = -1
 
 var pos_start = Vector2.ZERO
@@ -27,7 +28,6 @@ func _ready():
 	
 	var ball_tray_size = get_parent().get_size()
 	pos_start = Vector2(ball_tray_size.x - ball_size.x, ((ball_tray_size.y - ball_size.y) / 2))
-	print(pos_start)
 	
 	var cards = get_node("../../CardTray")
 	for card in cards.get_children():
@@ -57,6 +57,6 @@ func set_num(num):
 func on_ballpath_end():
 	emit_signal("ball_ended", num)
 	var ball_tray = get_parent()
-	if ("Ball" + str((ball_tray.get_child_count() - 1))) == self.name:
+	if (ball_tray.get_child_count() - 1) == id:
 		ball_tray.try_finish_extraction()
 

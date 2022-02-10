@@ -21,6 +21,7 @@ func create_balls():
 	for i in 30:
 		var ball_instance = ball_scene.instance()
 		ball_instance.hide()
+		ball_instance.id = i
 		add_child(ball_instance, true)
 
 func start_extraction():
@@ -54,15 +55,15 @@ func generate_value():
 	var ball_num = -1
 	randomize()
 	while not found:
-		ball_num = (randi() %  (60-1)) + 1
+		ball_num = (randi() %  (40-1)) + 1
 		if not balls.has(ball_num):
 			balls.push_back(ball_num)
-			print(ball_num)
 			found = true
 
 func on_play_btn_clicked():
 	match next_extraction_state:
 		PlayStatus.START:
+			reset_play()
 			generate_play()
 			start_extraction()
 		PlayStatus.PAUSE:

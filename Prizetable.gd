@@ -32,4 +32,5 @@ func _ready():
 	for pattern in prize_patterns:
 		var pattern_instance = pattern_scene.instance()
 		pattern_instance.pattern = pattern
+		pattern_instance.id = get_child_count()
 		add_child(pattern_instance, true)
