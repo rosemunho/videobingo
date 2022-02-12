@@ -1,13 +1,19 @@
 extends Container
 
+var config_file
+
 # Card Info Variables
 var is_active = true
 var cells = []
 var curr_prize = -1
 
 func _ready():
+	config_file = ConfigFile.new()
+	config_file.load("res://GlobalConfigs.cfg")
+	
 	display_card()
 
+# Update card visibility and generate numbers if visible
 func display_card():
 	if not is_active:
 		cells = []
@@ -20,6 +26,7 @@ func display_card():
 		
 # Change hardcoded values
 func generate_card():
+	var amount_cells = config_file.get_value("CARDS", "AMOUNT_CELLS")
 	for i in 15:
 		generate_value()
 	cells.sort()
@@ -40,8 +47,9 @@ func generate_value():
 	var found = false
 	var cell_num = -1
 	randomize()
+	var max_num_balls = config_file.get_value("EXTRACTION", "MAX_NUM_BALLS")
 	while not found:
-		cell_num = (randi() %  (40-1)) + 1
+		cell_num = (randi() %  (max_num_balls-1)) + 1
 		if not cells.has(cell_num):
 			cells.push_back(cell_num)
 			found = true
