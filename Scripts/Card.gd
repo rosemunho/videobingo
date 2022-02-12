@@ -5,13 +5,11 @@ var config_file
 # Card Info Variables
 var is_active = true
 var cells = []
-var curr_prize = -1
 
-# Prize Pattern Matching Variables
-var curr_pattern
-var min_pattern # minimum pattern than can be achieved by this card
+# Prize Pattern Matching Variable
 var curr_hits = 0
 var possible_patterns = []
+var matched_pattern = null
 
 func _ready():
 	config_file = ConfigFile.new()
@@ -60,12 +58,13 @@ func generate_value():
 			cells.push_back(cell_num)
 			found = true
 
+# Check if card has num
 func has_num(num):
 	if not is_active:
 		return false
 	return cells.has(num)
 	
-# 
+# Called when card is clicked, used to toggle between active and not active
 func on_card_clicked():
 	is_active = not is_active
 	display_card()
@@ -80,33 +79,26 @@ func on_ball_ended(ball_num):
 		if found:
 			curr_hits += 1
 			break
+	
 	if found:
+		var matched = false
+		var curr_pattern
+		var new_possible_patterns = []
 		for pattern_index in possible_patterns:
-			var curr_pattern = get_node("../../Prizetable/").get_child(pattern_index)
-			curr_pattern.test_match($CellContainer.get_children(), curr_hits)
-	if curr_pattern != null:
-		print(str(curr_pattern.id))
-#			print("test hits")
-#			min_pattern.test_match($CellContainer.get_children(), curr_hits)
+			# comparing with all the possible pattern starting with the highest
+			curr_pattern = get_node("../../Prizetable/").get_child(pattern_index)
+			matched = curr_pattern.test_match($CellContainer.get_children(), curr_hits)
+			if matched:
+				matched_pattern = curr_pattern
+				possible_patterns = new_possible_patterns
+				break
+			else:
+				# next iterations can only matched up to the current one
+				new_possible_patterns.push_back(pattern_index)
 
-func on_pattern_matched():
-	
-	print ("on_pattern_matched")
-	# animate prize
-	update_current_pattern()
-	
-func update_current_pattern():
-	curr_pattern = min_pattern
-	min_pattern.disconnect("pattern_matched", self, "on_pattern_matched")
-	if curr_pattern.id > 0:
-		min_pattern = get_node("../../Prizetable").get_child(curr_pattern-1)
-		min_pattern.connect("pattern_matched", self, "on_pattern_matched")
-
+# Reset card
 func reset():
 	var prizetable = get_node("../../Prizetable/")
-	min_pattern = prizetable.get_child(prizetable.get_child_count()-1)
-	min_pattern.connect("pattern_matched", self, "on_pattern_matched")
-	
 	for pattern in prizetable.get_children():
 		possible_patterns.push_back(pattern.id)
 	
