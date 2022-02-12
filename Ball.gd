@@ -70,6 +70,14 @@ func extract(i, j):
 # Function called by a signal after extraction animation ends
 func on_ballpath_end():
 	emit_signal("ball_ended", num)
+	var will_match = false
+	for card in (get_node("../../CardTray").get_children()):
+		var card_has_num = card.has_num(num)
+		will_match = will_match || card.has_num(num)
+	if will_match:
+		$MatchedAudio.play()
+	else:
+		$NotMatchedAudio.play()
 	var amount_balls = config_file.get_value("EXTRACTION", "AMOUNT_BALLS")
 	if (amount_balls - 1) == id:
 		var ball_tray = get_parent()
