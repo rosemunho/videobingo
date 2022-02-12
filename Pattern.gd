@@ -26,4 +26,7 @@ func test_match(card_cells, curr_hits):
 	for index in pattern_indexes:
 		card_cells[index].set_prize_status()
 	emit_signal("on_pattern_matched")
-	$ReferenceRect.show()
+	$Highlight.show()
+
+func reset():
+	$Highlight.hide()

@@ -66,6 +66,7 @@ func on_play_btn_clicked():
 			reset_play()
 			generate_play()
 			start_extraction()
+			toggle_cards_block(true)
 		PlayStatus.PAUSE:
 			toggle_pause(true)
 			next_extraction_state = PlayStatus.RESUME
@@ -74,12 +75,15 @@ func on_play_btn_clicked():
 			next_extraction_state = PlayStatus.PAUSE
 		PlayStatus.STOP:
 			reset_play()
+			toggle_cards_block(false)
 			next_extraction_state = PlayStatus.START
 			
 func reset_play():
 	var cards = get_node("../CardTray").get_children()
 	for card in cards:
 		card.reset()
+	var prizetable = get_node("../Prizetable")
+	prizetable.reset()
 	for ball in self.get_children():
 		ball.hide()
 
@@ -88,5 +92,11 @@ func toggle_pause(pause):
 	for ball in self.get_children():
 		ball.get_node("Timer").set_paused(pause)
 
-func try_finish_extraction():
+func allow_finish_extraction():
 	next_extraction_state = PlayStatus.STOP
+
+func toggle_cards_block(block):
+	var card_tray = get_node("../CardTray")
+	for card in card_tray.get_children():
+		var click_area = card.get_node("Button")
+		click_area.visible = !block

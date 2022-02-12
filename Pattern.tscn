@@ -120,7 +120,7 @@ margin_right = 104.0
 margin_bottom = 62.0
 rect_min_size = Vector2( 20, 20 )
 
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
+[node name="Highlight" type="ReferenceRect" parent="."]
 visible = false
 margin_right = 104.0
 margin_bottom = 62.0

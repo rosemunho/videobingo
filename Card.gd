@@ -1,5 +1,6 @@
 extends Container
 
+# Card Info Variables
 var is_active = true
 var cells = []
 var curr_prize = -1
